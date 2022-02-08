@@ -26,7 +26,8 @@ input.onGesture(Gesture.Shake, function () {
 })
 input.onButtonPressed(Button.AB, function () {
     basic.showIcon(IconNames.Surprised)
-    soundExpression.mysterious.play()
+    soundExpression.mysterious.playUntilDone()
+    basic.pause(1000)
     basic.showIcon(IconNames.StickFigure)
 })
 input.onButtonPressed(Button.B, function () {
@@ -37,6 +38,3 @@ input.onButtonPressed(Button.B, function () {
 })
 basic.showString("Ivan")
 basic.showIcon(IconNames.StickFigure)
-basic.forever(function () {
-	
-})
